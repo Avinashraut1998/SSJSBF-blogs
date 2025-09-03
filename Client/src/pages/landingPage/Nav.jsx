@@ -1,5 +1,6 @@
 import{ useState } from 'react';
 import { Menu, X, Home, BookOpen, User, Mail } from 'lucide-react';
+import { NavLink } from 'react-router';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,31 +15,36 @@ const Nav = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-pink-400 to-rose-500 rounded-lg flex items-center justify-center">
               <BookOpen className="w-5 h-5 text-white" />
+              
             </div>
-            <span className="text-xl font-bold text-gray-800">MyBlog</span>
+             
+            <span className="text-xl font-bold text-gray-800"></span>
+          </div> */}
+          <div className="flex items-center space-x-2 w-25">
+          <img src='src/img/logo.png' alt='image' />
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-gray-700 hover:text-pink-600 transition-colors font-medium flex items-center space-x-1">
+            <NavLink to="/" className="text-gray-700 hover:text-pink-600 transition-colors font-medium flex items-center space-x-1">
               <Home size={18} />
               <span>Home</span>
-            </a>
+            </NavLink>
             {/* <a href="/" className="text-gray-700 hover:text-pink-600 transition-colors font-medium flex items-center space-x-1">
               <BookOpen size={18} />
               <span>Blogs</span>
             </a> */}
-            <a href="/about" className="text-gray-700 hover:text-pink-600 transition-colors font-medium flex items-center space-x-1">
+            <NavLink to="/about" className="text-gray-700 hover:text-pink-600 transition-colors font-medium flex items-center space-x-1">
               <User size={18} />
               <span>About</span>
-            </a>
-            <a href="/contact" className="text-gray-700 hover:text-pink-600 transition-colors font-medium flex items-center space-x-1">
+            </NavLink>
+            <NavLink to="/contact" className="text-gray-700 hover:text-pink-600 transition-colors font-medium flex items-center space-x-1">
               <Mail size={18} />
               <span>Contact</span>
-            </a>
+            </NavLink>
           </div>
 
           <div>
