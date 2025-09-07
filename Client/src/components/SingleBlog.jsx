@@ -125,7 +125,7 @@ const SingleBlog = () => {
       <div className="max-w-4xl mx-auto">
         <button 
           onClick={handleBack}
-          className="flex items-center space-x-2 text-pink-600 hover:text-pink-700 mb-8 transition-colors group"
+          className="flex items-center space-x-2 text-pink-600 hover:text-pink-700 mb-8 transition-colors group cursor-pointer"
         >
           <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
           <span className="font-medium">Back to blogs</span>

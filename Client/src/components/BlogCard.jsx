@@ -46,7 +46,7 @@ const BlogCard = ({ blog, onClick }) => {
       
       <div className="mt-4 pt-4 border-t border-pink-50">
         <button
-         className="text-pink-600 hover:text-pink-700 font-medium text-sm transition-colors"
+         className="text-pink-600 hover:text-pink-700 font-medium text-sm transition-colors cursor-pointer"
         onClick={handleCardClick}>
           Read more →
         </button>
